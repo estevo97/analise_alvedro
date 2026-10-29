@@ -1,0 +1,16 @@
+
+services:
+  postgres:
+    image: postgres:16
+    container_name: postgres_alvedro
+    environment:
+      POSTGRES_USER: alumno
+      POSTGRES_PASSWORD: alvedro123
+      POSTGRES_DB: meteoroloxia
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
